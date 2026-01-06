@@ -1,4 +1,28 @@
-"""Static plotting functions."""
+"""
+STATIC PLOTTING - Creates Still Images Showing the Simulation Results
+
+WHAT THIS FILE DOES:
+This file creates static (non-moving) images that show:
+- The world with boundaries and obstacles
+- The path the drone took (trajectory)
+- Sample lidar rays at different points
+- Start and end positions
+
+WHAT THE PLOT SHOWS:
+- World boundaries as black lines
+- Obstacles as red shapes (circles or rectangles)
+- Drone's path as a blue line
+- Green dot = starting position
+- Red dot = ending position
+- Cyan lines = sample lidar rays showing what the drone "saw"
+
+FOR BEGINNERS:
+- Plot = a picture/diagram showing the simulation
+- Static = doesn't move (unlike animation)
+- Shows the complete path in one image
+- Good for analysis and reports
+- Saves as PNG image file that you can view or share
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt

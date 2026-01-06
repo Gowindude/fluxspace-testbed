@@ -1,4 +1,29 @@
-"""Waypoint-following demo script."""
+"""
+WAYPOINT-FOLLOWING DEMO - Tests the Controller by Following a Path
+
+WHAT THIS SCRIPT DOES:
+This script demonstrates the waypoint-following controller. It gives the drone a list of
+destination points and lets the controller figure out how to navigate to each one. The
+controller automatically calculates turns and speed adjustments.
+
+THE DEMO:
+1. Creates a world with boundaries and obstacles
+2. Places a drone at starting position (1, 1)
+3. Defines waypoints to visit: [(8,1), (8,5), (2,5), (2,1)] - makes a rectangle path
+4. Uses WaypointController to automatically navigate
+5. Controller calculates: direction to waypoint, how much to turn, how fast to go
+6. Generates outputs: plot, animation, and data log
+
+FOR BEGINNERS:
+- This shows how controllers work (the "brain" of the drone)
+- Waypoint = a destination point (like a pin on a map)
+- The controller automatically figures out how to reach each waypoint
+- More advanced than open-loop - responds to where the drone is
+- Run this to see autonomous navigation in action!
+
+TO RUN:
+  python scripts/run_demo_waypoints.py
+"""
 
 import sys
 from pathlib import Path

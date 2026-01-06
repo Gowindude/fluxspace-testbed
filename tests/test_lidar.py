@@ -1,4 +1,21 @@
-"""Tests for lidar sensor."""
+"""
+TESTS FOR LIDAR SENSOR - Automated Checks That the Sensor Works Correctly
+
+WHAT THIS FILE DOES:
+This file contains automated tests that verify the lidar sensor works correctly.
+It checks that the sensor correctly measures distances to obstacles and boundaries.
+
+WHAT GETS TESTED:
+- World boundaries: Does lidar detect world boundaries correctly?
+- Obstacles: Does lidar detect obstacles in front of the drone?
+- Ray angles: Are the lidar rays pointing in the correct directions?
+- Maximum range: Does lidar return max_range when no obstacle is detected?
+
+FOR BEGINNERS:
+- Tests verify that the "eyes" of the drone (lidar sensor) work correctly
+- Run with: pytest tests/test_lidar.py
+- Critical for navigation - the drone needs to "see" obstacles!
+"""
 
 import pytest
 import numpy as np

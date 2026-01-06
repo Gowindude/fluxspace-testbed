@@ -1,4 +1,24 @@
-"""2D world model with boundaries and obstacles."""
+"""
+WORLD MODEL - The Complete 2D Environment Where the Drone Operates
+
+WHAT THIS FILE DOES:
+This file creates the complete 2D world that contains:
+- Boundaries: The edges of the world (like walls that define the playing field)
+- Obstacles: Objects in the world that the drone should avoid
+- Collision detection: Checks if the drone hits anything
+
+MAIN FEATURES:
+- point_in_obstacle(): Checks if a point is inside any obstacle
+- point_in_bounds(): Checks if a point is within the world boundaries
+- collision(): Checks if the drone (modeled as a circle) collides with obstacles or boundaries
+- ray_bounds_intersection(): Used by lidar to detect world boundaries
+
+FOR BEGINNERS:
+- World = the entire 2D space where simulation happens (like a map)
+- Boundaries = the edges (left, right, top, bottom) - if drone goes past these, it crashes
+- Obstacles = objects to avoid (walls, pillars, etc.)
+- Collision detection = checking if drone hit something (like collision in a video game)
+"""
 
 from typing import List
 from .obstacles import Obstacle

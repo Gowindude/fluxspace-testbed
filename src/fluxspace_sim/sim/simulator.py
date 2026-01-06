@@ -1,4 +1,34 @@
-"""Main simulator that steps through time."""
+"""
+SIMULATOR - The Main Engine That Runs Everything
+
+WHAT THIS FILE DOES:
+This is the core engine that coordinates all the pieces and runs the simulation step by step.
+It's like the "game engine" that makes everything work together.
+
+SIMULATION LOOP (what happens each step):
+1. Get control commands (from controller or manual input)
+2. Perform lidar scan (what does the drone "see"?)
+3. Log current state (record everything)
+4. Update drone position (move the drone based on commands)
+5. Check for collisions (did the drone crash?)
+6. If collision, stop simulation
+
+THE SIMULATOR CONNECTS:
+- World (the environment)
+- Drone State (where the drone is)
+- Dynamics (how the drone moves)
+- Sensor (what the drone sees)
+- Controller (what the drone should do)
+- Logger (recording everything)
+
+FOR BEGINNERS:
+- Simulator = the main program that runs the simulation
+- Like a video game engine that updates everything 20 times per second
+- Each "step" is like one frame in a movie
+- "run()" method runs the whole simulation automatically
+- "step()" method runs just one step (useful for debugging)
+- Returns a logger with all the recorded data
+"""
 
 from ..world import World2D
 from ..drone.state import DroneState

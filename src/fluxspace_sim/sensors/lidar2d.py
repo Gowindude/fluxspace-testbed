@@ -1,4 +1,31 @@
-"""2D Lidar/Rangefinder sensor model."""
+"""
+LIDAR 2D SENSOR - Simulates a Laser Range Finder That Detects Obstacles
+
+WHAT THIS FILE DOES:
+This file simulates a lidar (Light Detection and Ranging) sensor - like the sensors on self-driving
+cars. The sensor shoots out invisible "rays" (like laser beams) in different directions and measures
+how far they travel before hitting something.
+
+HOW IT WORKS:
+1. Shoots out multiple rays in different directions (like a fan of laser beams)
+2. Each ray travels until it hits an obstacle or boundary
+3. Measures the distance each ray traveled
+4. Returns an array of distances: [dist1, dist2, dist3, ...]
+   - Each distance tells you how far the nearest obstacle is in that direction
+   - If no obstacle, returns max_range (sensor's maximum detection distance)
+
+SENSOR PARAMETERS:
+- n_rays: How many rays to shoot (more = more detailed but slower)
+- fov_deg: Field of view (how wide the sensor sees, like 270° = most of a circle)
+- max_range: Maximum distance it can detect (like how far you can see)
+
+FOR BEGINNERS:
+- Lidar = a sensor that measures distances to objects
+- Like a radar but using light/lasers instead of radio waves
+- Returns distances in each direction (like a radar screen showing objects)
+- Used by controllers to avoid obstacles
+- The "scan" method is called every simulation step to update what the drone "sees"
+"""
 
 import numpy as np
 from ..world import World2D

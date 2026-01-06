@@ -1,4 +1,20 @@
-"""Tests for collision detection."""
+"""
+TESTS FOR COLLISION DETECTION - Automated Checks That Collisions Work Correctly
+
+WHAT THIS FILE DOES:
+This file contains automated tests that verify collision detection works correctly.
+It checks that the simulator correctly detects when the drone hits obstacles or boundaries.
+
+WHAT GETS TESTED:
+- Circle obstacles: Does the drone detect collisions with round obstacles?
+- Rectangle obstacles: Does the drone detect collisions with rectangular obstacles?
+- Boundaries: Does the drone detect when it goes outside the world boundaries?
+
+FOR BEGINNERS:
+- Tests verify that collision detection (crash detection) works correctly
+- Run with: pytest tests/test_collision.py
+- Important for safety - ensures the drone knows when it crashes!
+"""
 
 import pytest
 from fluxspace_sim.world import World2D, CircleObstacle, RectObstacle

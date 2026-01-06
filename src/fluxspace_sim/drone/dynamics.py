@@ -1,4 +1,25 @@
-"""Drone dynamics model (unicycle/kinematic model)."""
+"""
+DRONE DYNAMICS - How the Drone Moves (Physics/Movement Rules)
+
+WHAT THIS FILE DOES:
+This file contains the physics model that determines how the drone moves. Given a command
+(like "go forward at 1 m/s" and "turn at 0.5 rad/s"), it calculates where the drone will be
+after a small amount of time passes.
+
+THE MOVEMENT MODEL (Simple Unicycle):
+- If facing direction θ and moving at speed v, position changes by:
+  - x changes by: v × cos(θ) × time_step
+  - y changes by: v × sin(θ) × time_step
+- Heading (yaw) changes by: yaw_rate × time_step
+- This is like a car that can turn and move forward (can't move sideways)
+
+FOR BEGINNERS:
+- Dynamics = the rules of how something moves
+- Takes commands (speed, turn rate) and calculates new position
+- Runs every simulation step (like every frame in a video game)
+- Simple model = no complex physics like air resistance or momentum
+- Think of it like moving a character in a top-down game: position + direction + speed = new position
+"""
 
 import numpy as np
 from .state import DroneState

@@ -1,4 +1,23 @@
-"""Geometry utility functions for ray casting and angle operations."""
+"""
+GEOMETRY HELPER FUNCTIONS - Math Calculations for Ray Casting
+
+WHAT THIS FILE DOES:
+This file contains mathematical functions that calculate intersections between lines (rays) and shapes
+(circles and rectangles). These calculations are used by the lidar sensor to figure out where obstacles
+are located.
+
+KEY FUNCTIONS:
+1. wrap_angle() - Keeps angles between -180 and 180 degrees (prevents angles from getting too large)
+2. ray_circle_intersection() - Finds where a line hits a circle (like lidar ray hitting round obstacle)
+3. ray_rect_intersection() - Finds where a line hits a rectangle (like lidar ray hitting wall)
+4. ray_bounds_intersection() - Finds where a line hits the world boundaries
+
+FOR BEGINNERS:
+- These are pure math functions - they just calculate numbers
+- Used heavily by the lidar sensor to detect obstacles
+- The math is complex but you don't need to understand it to use the simulator
+- Think of rays as laser beams shooting out from the drone
+"""
 
 import numpy as np
 

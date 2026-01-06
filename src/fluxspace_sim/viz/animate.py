@@ -1,4 +1,25 @@
-"""Animation functions."""
+"""
+ANIMATION - Creates Moving Videos Showing the Simulation
+
+WHAT THIS FILE DOES:
+This file creates animated videos that show the drone moving through the world over time.
+Like a movie of the simulation - you can see the drone move, turn, and navigate.
+
+WHAT THE ANIMATION SHOWS:
+- World boundaries and obstacles (static background)
+- Drone position (blue circle that moves)
+- Drone direction (line showing which way it's facing)
+- Lidar rays (optional, cyan lines showing what the drone sees)
+- Time display (shows current simulation time)
+- Full trajectory path (faded line showing where drone will go)
+
+FOR BEGINNERS:
+- Animation = a moving picture/video of the simulation
+- Shows the drone moving in real-time as the simulation progresses
+- Like watching a replay of the simulation
+- Saves as GIF file that you can view or share
+- Much easier to understand than static plots - you can see what happened!
+"""
 
 import numpy as np
 import matplotlib.pyplot as plt

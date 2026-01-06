@@ -1,4 +1,32 @@
-"""Open-loop control demo script."""
+"""
+OPEN-LOOP CONTROL DEMO - Tests the Simulator with Pre-Programmed Commands
+
+WHAT THIS SCRIPT DOES:
+This script demonstrates the simulator by running a drone with a fixed sequence of control
+commands. "Open-loop" means the commands are pre-determined and don't respond to what the
+drone sees - it's like a robot following a script.
+
+THE DEMO:
+1. Creates a world with boundaries and obstacles
+2. Places a drone at starting position (1, 1)
+3. Runs a pre-programmed sequence:
+   - Move forward for 5 seconds
+   - Turn left while moving for 3 seconds
+   - Move forward for 5 seconds
+   - Turn right while moving for 3 seconds
+   - Move forward for remaining time
+4. Generates outputs: plot, animation, and data log
+
+FOR BEGINNERS:
+- This is an example script showing how to use the simulator
+- You can modify it to test different scenarios
+- Open-loop = commands are fixed, don't change based on sensors
+- Good for testing if the basic simulation works correctly
+- Run this script to see the simulator in action!
+
+TO RUN:
+  python scripts/run_demo_open_loop.py
+"""
 
 import sys
 from pathlib import Path

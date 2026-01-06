@@ -1,4 +1,30 @@
-"""Simulation logger for storing state and sensor data."""
+"""
+SIMULATION LOGGER - Records Everything That Happens During Simulation
+
+WHAT THIS FILE DOES:
+This file creates a "black box recorder" that saves all the important information from the simulation.
+Every step, it records where the drone was, what it was doing, what it saw, etc.
+
+WHAT GETS LOGGED:
+- Time: When each event happened
+- Position: x, y coordinates every step
+- Heading: yaw angle (which way drone was facing)
+- Velocity: How fast the drone was moving
+- Commands: What control commands were given
+- Lidar scans: What the sensor detected (optional, can be memory-intensive)
+- Collisions: Whether the drone crashed
+
+HOW TO USE:
+- Logger automatically records data as simulation runs
+- After simulation, call save_npz() to save all data to a file
+- Load the file later to analyze what happened
+
+FOR BEGINNERS:
+- Logger = a recorder that saves everything (like flight recorder on an airplane)
+- Stores data in lists (one entry per simulation step)
+- Can save to .npz file for later analysis
+- Used by visualization tools to create plots and animations
+"""
 
 import numpy as np
 from typing import List

@@ -1,4 +1,21 @@
-"""Obstacle definitions for the 2D world."""
+"""
+OBSTACLE DEFINITIONS - What Obstacles Look Like in the World
+
+WHAT THIS FILE DOES:
+This file defines the types of obstacles that can exist in the 2D world. Currently supports:
+- CircleObstacle: Round obstacles (like pillars, trees, or round rocks)
+- RectObstacle: Rectangular obstacles (like walls or boxes)
+
+EACH OBSTACLE CAN:
+- Tell you if a point (x, y) is inside it
+- Tell you where a ray (laser beam) from the lidar hits it
+
+FOR BEGINNERS:
+- Obstacle = something the drone should avoid (like a wall)
+- CircleObstacle needs: center position (cx, cy) and radius (how big)
+- RectObstacle needs: corners (xmin, ymin, xmax, ymax) - like defining a box
+- The lidar sensor uses these to detect obstacles
+"""
 
 from abc import ABC, abstractmethod
 

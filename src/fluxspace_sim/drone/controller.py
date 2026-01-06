@@ -1,4 +1,29 @@
-"""Controller interfaces and implementations."""
+"""
+DRONE CONTROLLER - The "Brain" That Decides What the Drone Should Do
+
+WHAT THIS FILE DOES:
+This file contains the controller classes that decide what commands to give to the drone.
+The controller is like the "brain" - it looks at where the drone is, where it wants to go,
+and figures out what actions to take.
+
+CONTROLLER TYPES:
+1. Controller (base class) - Defines the interface that all controllers must follow
+2. WaypointController - Follows a list of waypoints (destination points)
+
+HOW WAYPOINT CONTROLLER WORKS:
+- Given a list of points to visit: [(x1, y1), (x2, y2), ...]
+- Calculates direction to current target waypoint
+- Figures out how much to turn to face that direction
+- Commands the drone: "Go this speed, turn this much"
+- When close enough to a waypoint, moves to next one
+
+FOR BEGINNERS:
+- Controller = the logic that controls the drone (like autopilot)
+- Waypoint = a destination point (like a pin on a map)
+- The controller calculates: "Which way should I turn? How fast should I go?"
+- Returns commands: (velocity, yaw_rate) which tell the drone what to do
+- Like a GPS that not only shows the route but also tells you to turn left/right
+"""
 
 from abc import ABC, abstractmethod
 import numpy as np

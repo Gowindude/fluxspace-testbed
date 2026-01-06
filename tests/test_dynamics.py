@@ -1,4 +1,23 @@
-"""Tests for drone dynamics."""
+"""
+TESTS FOR DRONE DYNAMICS - Automated Checks That Movement Works Correctly
+
+WHAT THIS FILE DOES:
+This file contains automated tests that verify the drone dynamics (movement physics)
+work correctly. These tests run automatically to make sure nothing is broken.
+
+WHAT GETS TESTED:
+- Forward motion: Does the drone move forward correctly?
+- Turning: Does the drone turn correctly?
+- Angle wrapping: Do angles stay in the correct range?
+- Combined motion: Does turning while moving work?
+
+FOR BEGINNERS:
+- Tests = automated checks that code works correctly
+- Run with: pytest tests/test_dynamics.py
+- If tests pass = everything works as expected
+- If tests fail = something is broken and needs fixing
+- These are like quality control checks
+"""
 
 import pytest
 import numpy as np
